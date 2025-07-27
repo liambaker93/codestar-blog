@@ -19,13 +19,13 @@ const deleteConfirm = document.getElementById("deleteConfirm");
  * - Sets the form's action attribute to the `edit_comment/{commentID}` endpoint.
  */
 for (let button of editButtons) {
-    button.addEventListener("click", (e) => {
-        let commentId = e.target.getAttribute("comment_id");
-        let commentContent = document.getElementById(`comment${commentId}`).innerText;
-        commentText.value = commentContent;
-        submitButton.innerText = "Update";
-        commentForm.setAttribute("action", `edit_comment/${commentId}`);
-    });
+  button.addEventListener("click", (e) => {
+    let commentId = e.target.getAttribute("comment_id");
+    let commentContent = document.getElementById(`comment${commentId}`).innerText;
+    commentText.value = commentContent;
+    submitButton.innerText = "Update";
+    commentForm.setAttribute("action", `edit_comment/${commentId}`);
+  });
 }
 
 /**
